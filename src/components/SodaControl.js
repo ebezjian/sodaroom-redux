@@ -57,13 +57,19 @@ class SodaControl extends React.Component {
     let buttonText = null;
 
     if (this.state.selectedSoda != null) {
-      currentlyVisibleState = <SodaDetail soda ={this.state.selectedSoda} onClickingDelete = {this.handleDeletingSoda}/>;
+      currentlyVisibleState = <SodaDetail 
+      soda ={this.state.selectedSoda} 
+      onClickingDelete = {this.handleDeletingSoda}
+      onClickingEdit = {this.handleEditclick}/>;
       buttonText = "Return to Soda List";
     } else if (this.state.formVisibleOnPage) {
-        currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />;
+        currentlyVisibleState = <NewSodaForm 
+        onNewSodaCreation={this.handleAddingNewSodaToList} />;
         buttonText = "Return to Soda List";
     } else {
-      currentlyVisibleState = <SodaList sodaList={this.state.masterSodaList} onSodaSelection ={this.handleChangingSelectedSoda} />;
+      currentlyVisibleState = <SodaList 
+      sodaList={this.state.masterSodaList} 
+      onSodaSelection ={this.handleChangingSelectedSoda} />;
       buttonText = "Add Soda"
     }
 
