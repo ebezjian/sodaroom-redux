@@ -13,11 +13,18 @@ class SodaControl extends React.Component {
     };
   }
 
-  handleClick =() => {
-    this.setState(prevState => ({
-      formVisibleOnPage: !prevState.formVisibleOnPage
-    }));
-  };
+  handleClick = () => {
+    if (this.state.selectedSoda != null) {
+        this.setState({
+          formVisibleOnPage: false,
+          selectedSoda: null
+        });
+      } else {
+      this.setState(prevState => ({
+        formVisibleOnPage: !prevState.formVisibleOnPage
+      }));
+    }
+  } 
 
   handleAddingNewSodaToList =(newSoda) => {
     const newMasterSodaList = this.state.masterSodaList.concat(newSoda);

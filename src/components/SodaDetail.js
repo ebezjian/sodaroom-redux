@@ -6,7 +6,7 @@ function SodaDetail(props) {
 
   return (
     <>
-    <h1>Soda Detail placeholder</h1>
+    <h1>Soda Detail</h1>
     <h3>{soda.name} - {soda.brand}</h3>
     <h3>{soda.price} - {soda.flavor}</h3> 
     </>
