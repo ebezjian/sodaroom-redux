@@ -17,6 +17,8 @@ Soda.propTypes = {
   brand: PropTypes.string,
   price: PropTypes.string,
   flavor: PropTypes.string,
-}
+  id: PropTypes.string,
+  whenSodaClicked: PropTypes.func,
+};
 
 export default Soda;
