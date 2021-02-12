@@ -17,7 +17,8 @@ function SodaDetail(props) {
 
 SodaDetail.propTypes = {
   soda: PropTypes.object,
-  onClickingDelete: PropTypes.func
+  onClickingDelete: PropTypes.func,
+  onClickingEdit: PropTypes.func,
 };
 
 export default SodaDetail;
