@@ -1,5 +1,6 @@
 import React from "react";
 import ReusableForm from "./ReusableForm";
+import PropTypes from "prop-types";
 
 function EditSodaForm (props) {
   return (
@@ -9,5 +10,10 @@ function EditSodaForm (props) {
     </>
   );
 }
+
+EditSodaForm.propTypes = {
+  soda: PropTypes.object,
+  onEditSoda: PropTypes.func,
+};
 
 export default EditSodaForm;
