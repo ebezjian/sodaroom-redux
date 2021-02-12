@@ -2,6 +2,7 @@ import React from 'react';
 import NewSodaForm from './NewSodaForm';
 import SodaList from './SodaList';
 import SodaDetail from './SodaDetail';
+import EditSodaForm from './EditSodaForm';
 
 class SodaControl extends React.Component {
   constructor(props) {
@@ -55,8 +56,11 @@ class SodaControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-
-    if (this.state.selectedSoda != null) {
+    if (this.state.editing) {
+      currentlyVisibleState = <EditSodaForm 
+      soda = {this.state.selectedSoda} />
+      buttonText = "Return to Soda List";
+    } else if (this.state.selectedSoda != null) {
       currentlyVisibleState = <SodaDetail 
       soda ={this.state.selectedSoda} 
       onClickingDelete = {this.handleDeletingSoda}
