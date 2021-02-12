@@ -29,7 +29,7 @@ class SodaControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null;
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewSodaForm />;
+      currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />;
       buttonText = "Return to Soda List";
     } else {
       currentlyVisibleState = <SodaList sodaList={this.state.masterSodaList} />;
