@@ -7,7 +7,8 @@ class SodaControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      masterSodaList: []
+      masterSodaList: [],
+      selectedSoda: null
     };
   }
 
@@ -17,7 +18,7 @@ class SodaControl extends React.Component {
     }));
   };
 
-  handleAddingNewSoda =(newSoda) => {
+  handleAddingNewSodaToList =(newSoda) => {
     const newMasterSodaList = this.state.masterSodaList.concat(newSoda);
     this.setState({
       masterSodaList: newMasterSodaList,

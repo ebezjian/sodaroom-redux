@@ -5,20 +5,20 @@ import PropTypes from 'prop-types';
 function SodaList(props) {
   return (
     <>
-    {props.sodaList.map((soda, index) =>
+    {props.sodaList.map((soda) =>
       <Soda
       name={soda.name}
       brand={soda.brand}
       price={soda.price}
       flavor={soda.flavor}
-      key={index} />
+      id={soda.id} />
       )}
     </>
   );
 }
 
 SodaList.propTypes = {
-  sodaList: PropTypes.array
+  sodaList: PropTypes.array,
 };
 
 export default SodaList;

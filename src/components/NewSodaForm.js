@@ -1,10 +1,13 @@
 import React from 'react';
 import { v4 } from 'uuid';
+import PropTypes from 'prop-types';
 
 function NewSodaForm(props) {
-  function handleNewSodaformSubmission(event) {
+
+  function handleNewSodaFormSubmission(event) {
     event.preventDefault();
     props.onNewSodaCreation({
+      
       name: event.target.name.value,
       brand: event.target.brand.value,
       price: event.target.price.value,
@@ -13,7 +16,7 @@ function NewSodaForm(props) {
   }
   return (
     <>
-    <form onSubmit={handleNewSodaformSubmission}>
+    <form onSubmit={handleNewSodaFormSubmission}>
       <input
         type="text"
         name="name"
