@@ -17,6 +17,14 @@ class SodaControl extends React.Component {
     }));
   };
 
+  handleAddingNewSoda =(newSoda) => {
+    const newMasterSodaList = this.state.masterSodaList.concat(newSoda);
+    this.setState({
+      masterSodaList: newMasterSodaList,
+      formVisibleOnPage: false
+    });
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
