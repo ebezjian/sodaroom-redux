@@ -6,7 +6,8 @@ class SodaControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      masterSodaList: []
     };
   }
 
@@ -23,7 +24,7 @@ class SodaControl extends React.Component {
       currentlyVisibleState = <NewSodaForm />;
       buttonText = "Return to Soda List";
     } else {
-      currentlyVisibleState = <SodaList />;
+      currentlyVisibleState = <SodaList sodaList={this.state.masterSodaList} />;
       buttonText = "Add Soda"
     }
     return (

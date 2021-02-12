@@ -1,7 +1,7 @@
 import React from 'react';
 import { v4 } from 'uuid';
 
-function NewSodaForm(props) {
+function NewSodaForm() {
   return (
     <>
     <form onSubmit={handleNewSodaformSubmission}>
