@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from "./Header";
-import SodaList from "./SodaList";
+import SodaControl from "./SodaControl";
 
 function App() {
   return (
     <>
     <Header />
-    <SodaList />
+    <SodaControl />
     </>
   );
 }
