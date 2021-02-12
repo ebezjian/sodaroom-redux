@@ -1,7 +1,16 @@
 import React from 'react';
 import { v4 } from 'uuid';
 
-function NewSodaForm() {
+function NewSodaForm(props) {
+  function handleNewSodaformSubmission(event) {
+    event.preventDefault();
+    props.onNewSodaCreation({
+      name: event.target.name.value,
+      brand: event.target.brand.value,
+      price: event.target.price.value,
+      flavor: event.target.flavor.value,
+      id: v4()});
+  }
   return (
     <>
     <form onSubmit={handleNewSodaformSubmission}>
@@ -26,5 +35,9 @@ function NewSodaForm() {
     </>
   );
 }
+
+NewSodaForm.propTypes = {
+  onNewSodaCreation: PropTypes.func
+};
 
 export default NewSodaForm;
