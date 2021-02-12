@@ -10,16 +10,26 @@ class SodaControl extends React.Component {
     };
   }
 
+  handleClick =() => {
+    this.setState(prevState => ({
+      formVisibleOnPage: !prevState.formVisibleOnPage
+    }));
+  };
+
   render() {
     let currentlyVisibleState = null;
+    let buttonText = null;
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewSodaForm />;
+      buttonText = "Return to Soda List";
     } else {
       currentlyVisibleState = <SodaList />;
+      buttonText = "Add Soda"
     }
     return (
       <>
       {currentlyVisibleState}
+      <button onClick={this.handleClick}>{buttonText}</button>
       </>
     );
   }
