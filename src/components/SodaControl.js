@@ -48,6 +48,10 @@ class SodaControl extends React.Component {
     });
   }
 
+  handleEditclick = () => {
+    this.setState({editing: true});
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
