@@ -1,6 +1,7 @@
 import React from 'react';
 import NewSodaForm from './NewSodaForm';
 import SodaList from './SodaList';
+import SodaDetail from './SodaDetail';
 
 class SodaControl extends React.Component {
   constructor(props) {
@@ -34,13 +35,18 @@ class SodaControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />;
+
+    if (this.state.selectedSoda != null) {
+      currentlyVisibleState = <SodaDetail soda ={this.state.selectedSoda} />;
       buttonText = "Return to Soda List";
+    } else if (this.state.formVisibleOnPage) {
+        currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />;
+        buttonText = "Return to Soda List";
     } else {
       currentlyVisibleState = <SodaList sodaList={this.state.masterSodaList} />;
       buttonText = "Add Soda"
     }
+
     return (
       <>
       {currentlyVisibleState}
