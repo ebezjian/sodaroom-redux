@@ -43,7 +43,7 @@ class SodaControl extends React.Component {
         currentlyVisibleState = <NewSodaForm onNewSodaCreation={this.handleAddingNewSodaToList} />;
         buttonText = "Return to Soda List";
     } else {
-      currentlyVisibleState = <SodaList sodaList={this.state.masterSodaList} />;
+      currentlyVisibleState = <SodaList sodaList={this.state.masterSodaList} onSodaSelection ={this.handleChangingSelectedSoda} />;
       buttonText = "Add Soda"
     }
 

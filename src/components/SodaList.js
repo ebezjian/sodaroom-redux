@@ -7,6 +7,7 @@ function SodaList(props) {
     <>
     {props.sodaList.map((soda) =>
       <Soda
+      whenSodaClicked = {props.onSodaSelection}
       name={soda.name}
       brand={soda.brand}
       price={soda.price}
@@ -19,6 +20,7 @@ function SodaList(props) {
 
 SodaList.propTypes = {
   sodaList: PropTypes.array,
+  onSodaSelection: PropTypes.func,
 };
 
 export default SodaList;
