@@ -19,7 +19,8 @@ class SodaControl extends React.Component {
     if (this.state.selectedSoda != null) {
         this.setState({
           formVisibleOnPage: false,
-          selectedSoda: null
+          selectedSoda: null,
+          editing: false,
         });
       } else {
       this.setState(prevState => ({
