@@ -9,7 +9,8 @@ class SodaControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       masterSodaList: [],
-      selectedSoda: null
+      selectedSoda: null,
+      editing: false,
     };
   }
 
