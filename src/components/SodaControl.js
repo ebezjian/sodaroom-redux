@@ -53,6 +53,18 @@ class SodaControl extends React.Component {
     this.setState({editing: true});
   }
 
+  handleEditingSodaInList = (sodaToEdit) => {
+    const editedMasterSodaList = this.state.masterSodaList
+      .filter(soda => soda.id !== this.state.selectedSoda.id)
+      .concat(sodaToEdit);
+    this.setState({
+      masterSodaList: editedMasterSodaList,
+      editing: false,
+      selectedSoda: null
+    });
+
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
