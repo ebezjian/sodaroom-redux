@@ -26,6 +26,11 @@ class SodaControl extends React.Component {
     });
   }
 
+  handleChangingSelectedSoda = (id) => {
+    const selectedSoda = this.state.masterSodaList.filter(soda => soda.id === id)[0];
+    this.setState({selectedSoda: selectedSoda});
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
