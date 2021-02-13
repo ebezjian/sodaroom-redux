@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header(){
   return(
-    <h1>Headerplaceholder</h1>
+    <h1>What's Poppin': Soda Pop</h1>
   );
 }
 

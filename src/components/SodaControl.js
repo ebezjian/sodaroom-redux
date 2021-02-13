@@ -12,8 +12,19 @@ class SodaControl extends React.Component {
       masterSodaList: [],
       selectedSoda: null,
       editing: false,
+      
     };
   }
+  handleBuyingSelectedSoda = (soda) => {
+    if (soda.quantity <= 124){
+      return --soda.quantity;
+    } else if(soda.quantity === 10) { 
+      alert("You're running out soon");
+     return --soda.quantity
+    }
+  }
+
+
 
   handleClick = () => {
     if (this.state.selectedSoda != null) {
@@ -30,6 +41,7 @@ class SodaControl extends React.Component {
   } 
 
   handleAddingNewSodaToList =(newSoda) => {
+    console.log(newSoda)
     const newMasterSodaList = this.state.masterSodaList.concat(newSoda);
     this.setState({
       masterSodaList: newMasterSodaList,
@@ -66,9 +78,11 @@ class SodaControl extends React.Component {
 
   }
 
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
+    console.log(this.state)
     if (this.state.editing) {
       currentlyVisibleState = <EditSodaForm 
       soda = {this.state.selectedSoda}
@@ -78,6 +92,7 @@ class SodaControl extends React.Component {
       currentlyVisibleState = <SodaDetail 
       soda ={this.state.selectedSoda} 
       onClickingDelete = {this.handleDeletingSoda}
+      onBuying={this.handleBuyingSelectedSoda}
       onClickingEdit = {this.handleEditclick}/>;
       buttonText = "Return to Soda List";
     } else if (this.state.formVisibleOnPage) {
