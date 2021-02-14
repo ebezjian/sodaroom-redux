@@ -12,19 +12,32 @@ class SodaControl extends React.Component {
       masterSodaList: [],
       selectedSoda: null,
       editing: false,
-      
+      buying: false,
     };
   }
-  handleBuyingSelectedSoda = (soda) => {
-    if (soda.quantity <= 124){
-      return --soda.quantity;
-    } else if(soda.quantity === 10) { 
-      alert("You're running out soon");
-     return --soda.quantity
-    }
+  
+  handleBuyingSelectedSoda = () => {
+    const selectedSoda = this.state.selectedSoda;
+    if (selectedSoda.quantity > 1) {
+      const newSodaCount = Object.assign({}, selectedSoda, { quantity: selectedSoda.quantity -1});
+      const newMasterSodaList = this.state.masterSodaList
+      .filter(soda => soda.id !== this.state.selectedSoda.id)
+      .concat(newSodaCount);
+      this.setState({ 
+        masterSodaList: newMasterSodaList,
+        selectedSoda: null
+      });
+    } else if (selectedSoda.quantity === 1) {
+      const newSodaCount = Object.assign({}, selectedSoda, { quantity: selectedSoda.quantity = 'Out of Stock' });
+      const newMasterSodaList = this.state.masterSodaList
+      .filter(soda => soda.id !== this.state.selectedSoda.id)
+      .concat(newSodaCount);
+      this.setState({ 
+        masterSodaList: newMasterSodaList,
+        selectedSoda: null
+      });
+    } 
   }
-
-
 
   handleClick = () => {
     if (this.state.selectedSoda != null) {
@@ -88,17 +101,20 @@ class SodaControl extends React.Component {
       soda = {this.state.selectedSoda}
       onEditSoda = {this.handleEditingSodaInList} />
       buttonText = "Return to Soda List";
+
     } else if (this.state.selectedSoda != null) {
       currentlyVisibleState = <SodaDetail 
       soda ={this.state.selectedSoda} 
       onClickingDelete = {this.handleDeletingSoda}
-      onBuying={this.handleBuyingSelectedSoda}
+      onClickingBuying={this.handleBuyingSelectedSoda}
       onClickingEdit = {this.handleEditclick}/>;
       buttonText = "Return to Soda List";
+
     } else if (this.state.formVisibleOnPage) {
         currentlyVisibleState = <NewSodaForm 
         onNewSodaCreation={this.handleAddingNewSodaToList} />;
         buttonText = "Return to Soda List";
+
     } else {
       currentlyVisibleState = <SodaList 
       sodaList={this.state.masterSodaList} 
