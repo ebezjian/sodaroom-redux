@@ -14,7 +14,7 @@ function SodaDetail(props) {
     <h3>{soda.quantity} Pints</h3>
     <h3>{soda.flavor}</h3> 
 
-    {soda.quantity > 0 && <button onClick={()=>props.onBuying(soda.id)}>Buy Soda</button>}
+    <button onClick={()=>props.onBuying(soda.id)}>Buy Soda</button>
     {soda.quantity <= 10 && <button onClick={()=>props.onRestocking(soda.id, parseInt("#restock").val())}>Restock</button>}    
     <button onClick={ props.onClickingEdit }>Edit Soda</button>
     <button onClick={()=> onClickingDelete(soda.id) }>Delete Soda</button>

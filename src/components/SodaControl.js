@@ -88,7 +88,6 @@ class SodaControl extends React.Component {
       editing: false,
       selectedSoda: null
     });
-
   }
 
 
@@ -106,7 +105,7 @@ class SodaControl extends React.Component {
       currentlyVisibleState = <SodaDetail 
       soda ={this.state.selectedSoda} 
       onClickingDelete = {this.handleDeletingSoda}
-      onClickingBuying={this.handleBuyingSelectedSoda}
+      onBuying={this.handleBuyingSelectedSoda}
       onClickingEdit = {this.handleEditclick}/>;
       buttonText = "Return to Soda List";
 
