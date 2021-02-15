@@ -12,4 +12,9 @@ code {
     monospace;
 }
 
+.test{
+  background-color: red;
+  width: auto;
+  text-align: center;
 
+}
