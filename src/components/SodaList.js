@@ -12,6 +12,7 @@ function SodaList(props) {
       brand={soda.brand}
       price={soda.price}
       flavor={soda.flavor}
+      quantity={soda.quantity}
       id={soda.id} />
       )}
     </>

@@ -13,8 +13,12 @@ code {
 }
 
 .test{
-  background-color: red;
+  background-color:paleturquoise;
   width: auto;
   text-align: center;
 
+}
+
+.placeHolderText{
+  text-align: center;   
 }
