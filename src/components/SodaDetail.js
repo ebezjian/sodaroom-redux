@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Button} from 'react-bootstrap';
 
 
 function SodaDetail(props) {
@@ -14,10 +15,10 @@ function SodaDetail(props) {
     <h3>{soda.quantity} Pints</h3>
     <h3>{soda.flavor}</h3> 
 
-    <button onClick={()=>props.onBuying(soda.id)}>Buy Soda</button>
+    <Button variant="outline-secondary" onClick={()=>props.onBuying(soda.id)}>Buy Soda</Button>
     {soda.quantity <= 10 && <button onClick={()=>props.onRestocking(soda.id, parseInt("#restock").val())}>Restock</button>}    
-    <button onClick={ props.onClickingEdit }>Edit Soda</button>
-    <button onClick={()=> onClickingDelete(soda.id) }>Delete Soda</button>
+    <Button variant="outline-secondary" onClick={ props.onClickingEdit }>Edit Soda</Button>
+    <Button variant="outline-secondary" onClick={()=> onClickingDelete(soda.id) }>Delete Soda</Button>
     </>
   );
 }

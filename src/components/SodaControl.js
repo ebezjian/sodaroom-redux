@@ -3,6 +3,7 @@ import NewSodaForm from './NewSodaForm';
 import SodaList from './SodaList';
 import SodaDetail from './SodaDetail';
 import EditSodaForm from './EditSodaForm';
+import { Button } from 'react-bootstrap';
 
 class SodaControl extends React.Component {
   constructor(props) {
@@ -124,7 +125,7 @@ class SodaControl extends React.Component {
     return (
       <>
       {currentlyVisibleState}
-      <button onClick={this.handleClick}>{buttonText}</button>
+      <Button  variant="outline-secondary" onClick={this.handleClick}>{buttonText}</Button>
       </>
     );
   }
