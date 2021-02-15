@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button, Col, Form, Card } from "react-bootstrap";
+import { Button, Col, Form, Card, Container } from "react-bootstrap";
 
 function ReusableForm(props) {
   return (
     <>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+    <Container className="cardContainer">
+      <Card className="cardContainer" style={{ width: "18rem" }}>
+        <Card.Img variant="top" src="https://i.pinimg.com/originals/eb/3b/36/eb3b36ca8938ab98ed425dd56c451aab.jpg" />
         <Card.Body>
           <Form onSubmit={props.formSubmissionHandler} className="test">
             <Form.Row className="align-items-center">
@@ -61,6 +62,7 @@ function ReusableForm(props) {
           </Form>
         </Card.Body>
       </Card>
+    </Container>
     </>
   );
 }

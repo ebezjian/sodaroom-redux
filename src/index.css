@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://wallpaperaccess.com/full/762827.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
@@ -21,4 +24,24 @@ code {
 
 .placeHolderText{
   text-align: center;   
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-image: url("https://image.shutterstock.com/image-illustration/retro-background-260nw-432728914.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: paleturquoise;
+  padding-bottom: 30px;
+  
+}
+
+.headerContainer{
+  height: 100px;
 }
