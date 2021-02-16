@@ -1,6 +1,35 @@
-# Getting Started with Create React App
+<div align="center">
+<img src="https://user-images.githubusercontent.com/49379604/99859318-b8f5c700-2b5d-11eb-9977-056ef61ecdb3.png">
+</div>
+
+# What's Poppin': Soda Pop Shop
+
+### Created: 2.12.2021 - Last Updated: 2.16.2021
+
+## Description
+
+This application displays the landing page for What's Poppin': Soda Pop Shop. A user may add, view, and delete kegs. A user may also purchase a pint from a keg.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Component Diagram
+
+<div align="center">
+<img src="https://cdn.discordapp.com/attachments/537816642122547212/811277029470109766/diagrams.PNG">
+</div>
+
+## Technologies Used
+
+VS Code <br />
+HTML <br />
+CSS<br />
+JavaScript<br />
+React<br />
+BootStrap<br />
+
+## Known Bugs
+
+The pint does reduce down but you have to go back into details to see it reduced down
 
 ## Available Scripts
 
@@ -45,26 +74,8 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Legal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+*This software is licensed under the MIT license.*
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright (c) 2021 **Ellie Lambert*
