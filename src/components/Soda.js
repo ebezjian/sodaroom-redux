@@ -22,7 +22,7 @@ function Soda(props, soda) {
 Soda.propTypes = {
   name: PropTypes.string,
   brand: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.string,
   flavor: PropTypes.string,
   quantity: PropTypes.number,
   id: PropTypes.string,

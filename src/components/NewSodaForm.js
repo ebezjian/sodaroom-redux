@@ -11,7 +11,7 @@ function NewSodaForm(props) {
       
       name: event.target.name.value,
       brand: event.target.brand.value,
-      price: event.target.price.value,
+      price: (event.target.price.value),
       flavor: event.target.flavor.value,
       quantity: 124,
       id: v4()});

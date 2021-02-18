@@ -10,7 +10,7 @@ function App() {
     
       <Header />
     
-    <div classname="container">   
+    <div className="container">   
       <SodaControl />
     </div>
     </>
