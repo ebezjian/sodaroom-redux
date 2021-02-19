@@ -1,10 +1,11 @@
-export const deleteSoda = id => ({
-  type: 'DELETE_SODA',
-  id
+import * as c from './ActionTypes';
+
+export const deleteSoda = (id) => ({
+  type: c.DELETE_SODA
 });
 
 export const toggleForm = () => ({
-  type: 'TOGGLE_FORM'
+  type: c.TOGGLE_FORM
 });
 
 export const addSoda = (soda) => {
@@ -17,4 +18,10 @@ export const addSoda = (soda) => {
     flavor: flavor,
     id: id,
   }
+}
+
+export const toggleEdit = () => {
+  return {
+    type: c.TOGGLE_EDIT
+  };
 }
