@@ -8,3 +8,5 @@ describe("rootReducer", () => {
       formVisibleOnPage: false
     });
   });
+
+});
