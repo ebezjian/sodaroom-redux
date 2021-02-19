@@ -70,10 +70,7 @@ class SodaControl extends React.Component {
 
   handleDeletingSoda = (id) => {
     const { dispatch } = this.props;
-    const action = {
-      type: 'DELETE_SODA',
-      id: id,
-    }
+    const action = a.deleteSoda(id);
     dispatch(action);
     this.setState({selectedSoda: null});
   }
