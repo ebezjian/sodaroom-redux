@@ -153,12 +153,14 @@ class SodaControl extends React.Component {
 }
 
 SodaControl.propTypes = {
-  masterSodaList: PropTypes.object
+  masterSodaList: PropTypes.object,
+  formVisibleOnPage: PropTypes.bool,
 };
 
 const mapStateToProps = state => {
   return {
-    masterSodaList: state
+    masterSodaList: state.masterSodaList,
+    formVisibleOnPage: state.formVisibleOnPage
   }
 }
 SodaControl = connect(mapStateToProps)(SodaControl);

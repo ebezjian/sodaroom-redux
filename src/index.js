@@ -5,10 +5,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import {createStore} from 'redux/store';
-import reducer from '.reducers/soda-list-reducer';
-import {Provider} from 'react-redux';
 
-const store = createStore(reducer);
+import {Provider} from 'react-redux';
+import rootReducer from './reducers/index';
+
+const store = createStore(rootReducer);
 store.subscribe(() =>
   console.log(store.getState())
 );
