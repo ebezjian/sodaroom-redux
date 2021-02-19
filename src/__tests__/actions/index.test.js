@@ -13,4 +13,20 @@ describe('taproom actions', () => {
       type: 'TOGGLE_FORM'
     });
   });
+
+  it('addSoda should create ADD_SODA action', () => {
+    expect(actions.addSoda({name: 'Cherry Pop',
+    brand: 'Pepsi',
+    price: '12',
+    flavor: 'cherry',
+    id: 1})).toEqual({
+      type: 'ADD_SODA',
+      name: 'Cherry Pop',
+      brand: 'Pepsi',
+      price: '12',
+      flavor: 'cherry',
+      id: 1
+    });
+  });
+
 });
