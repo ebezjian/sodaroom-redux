@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function SodaList(props) {
   return (
     <>
-    {props.sodaList.map((soda) =>
+    {Object.values(props.sodaList).map((soda) =>
       <Soda
       whenSodaClicked = {props.onSodaSelection}
       name={soda.name}
@@ -20,7 +20,7 @@ function SodaList(props) {
 }
 
 SodaList.propTypes = {
-  sodaList: PropTypes.array,
+  sodaList: PropTypes.object,
   onSodaSelection: PropTypes.func,
 };
 
