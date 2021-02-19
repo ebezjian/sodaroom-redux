@@ -20,6 +20,26 @@ describe("rootReducer", () => {
   test('Check that initial state of formVisibleReducer matches root reducer', () => {
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, { type: null }));
   });
-  
 
+  test('Check that ADD_SODA action works for ticketListReducer and root reducer', () => {
+    const action = {
+      type: 'ADD_SODA',
+      name: 'Cherry Pop',
+      brand: 'Pepsi',
+      price: '12',
+      flavor: 'cherry',
+      id: 1
+    }
+    store.dispatch(action);
+    expect(store.getState().masterSodaList).toEqual(sodaListReducer(undefined, action));
+  });
+  
+  test('Check that TOGGLE_FORM action works for formVisibleReducer and root reducer', () => {
+    const action = {
+      type: 'TOGGLE_FORM'
+    }
+    store.dispatch(action);
+    expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));
+  });
+  
 });
