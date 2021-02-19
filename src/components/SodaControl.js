@@ -10,8 +10,7 @@ class SodaControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false,
-      masterSodaList: [],
+      formVisibleOnPage: false,      
       selectedSoda: null,
       editing: false,
       buying: false,
@@ -56,12 +55,22 @@ class SodaControl extends React.Component {
   } 
 
   handleAddingNewSodaToList =(newSoda) => {
-    console.log(newSoda)
+    const { dispatch } = this.props;
+    const { id, name, brand, price, flavor} = newSoda;
+    const action = {
+      type: 'ADD_SODA',
+      id: id,
+      name: name,
+      brand: brand,
+      price: price,
+      flavor: flavor,
+    }
+    dispatch(action);
+    this.setState({formVisibleOnPage: false});
     const newMasterSodaList = this.state.masterSodaList.concat(newSoda);
     this.setState({
       masterSodaList: newMasterSodaList,
-      formVisibleOnPage: false
-    });
+      formVisibleOnPage: false});
   }
 
   handleChangingSelectedSoda = (id) => {
@@ -70,11 +79,13 @@ class SodaControl extends React.Component {
   }
 
   handleDeletingSoda = (id) => {
-    const newMasterSodaList = this.state.masterSodaList.filter(soda => soda.id !== id);
-    this.setState({
-      masterSodaList: newMasterSodaList,
-      selectedSoda: null
-    });
+    const { dispatch } = this.props;
+    const action = {
+      type: 'DELETE_SODA',
+      id: id,
+    }
+    dispatch(action);
+    this.setState({selectedSoda: null});
   }
 
   handleEditclick = () => {
@@ -82,11 +93,18 @@ class SodaControl extends React.Component {
   }
 
   handleEditingSodaInList = (sodaToEdit) => {
-    const editedMasterSodaList = this.state.masterSodaList
-      .filter(soda => soda.id !== this.state.selectedSoda.id)
-      .concat(sodaToEdit);
+    const {dispatch} = this.props;
+    const { id, name, brand, price, flavor} =sodaToEdit;
+    const action ={
+      type: 'ADD_SODA',
+      id: id,
+      name: name,
+      brand: brand,
+      price: price,
+      flavor: flavor,
+    }
+    dispatch(action);
     this.setState({
-      masterSodaList: editedMasterSodaList,
       editing: false,
       selectedSoda: null
     });

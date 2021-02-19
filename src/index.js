@@ -9,6 +9,7 @@ import reducer from '.reducers/soda-list-reducer';
 import {Provider} from 'react-redux';
 
 const store = createStore(reducer);
+store.subscribe(() =>);
 
 ReactDOM.render(
   <Provider store={store}>

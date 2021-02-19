@@ -5,6 +5,7 @@ describe('sodaListReducer', () => {
   brand: 'Pepsi',
   price: '12',
   flavor: 'cherry',
+  
   id: 1},
   2: {name: 'StrawPop',
   brand: 'Pepsi',
@@ -18,6 +19,7 @@ describe('sodaListReducer', () => {
     brand: 'Pepsi',
     price: '12',
     flavor: 'cherry',
+    
     id: 1
   };
 
@@ -37,7 +39,7 @@ describe('sodaListReducer', () => {
           brand: brand,
           price: price,
           flavor: flavor,
-          id: id
+          id: id,
     };
 
     expect(sodaListReducer({}, action)).toEqual({
@@ -46,7 +48,7 @@ describe('sodaListReducer', () => {
         brand: brand,
         price: price,
         flavor: flavor,
-        id: id
+        id: id,
       }
     });
   });
@@ -59,7 +61,7 @@ describe('sodaListReducer', () => {
       2:{name: 'StrawPop',
       brand: 'Pepsi',
       price: '12',
-      flavor: 'strawberry',
+      flavor: 'strawberry',      
       id: 2},
     });
   });
