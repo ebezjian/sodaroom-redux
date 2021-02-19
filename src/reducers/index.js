@@ -4,7 +4,7 @@ import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
   formVisibleOnPage: formVisibleReducer,
-  masterSodaList: sodaListReducer
+  masterSodaList: sodaListReducer,
 });
 
 export default rootReducer;
