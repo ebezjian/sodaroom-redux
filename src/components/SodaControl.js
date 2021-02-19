@@ -4,6 +4,7 @@ import SodaList from './SodaList';
 import SodaDetail from './SodaDetail';
 import EditSodaForm from './EditSodaForm';
 import { Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
 
 class SodaControl extends React.Component {
   constructor(props) {
@@ -131,5 +132,5 @@ class SodaControl extends React.Component {
   }
 
 }
-
+TicketControl = connect()(TicketControl);
 export default SodaControl;
