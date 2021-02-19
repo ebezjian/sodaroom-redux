@@ -4,6 +4,10 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import {createStore} from 'redux/store';
+import reducer from '.reducers/soda-list-reducer';
+
+const store = createStore(reducer);
 
 ReactDOM.render(
   <React.StrictMode>
