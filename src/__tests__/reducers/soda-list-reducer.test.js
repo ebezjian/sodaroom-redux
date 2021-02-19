@@ -1,4 +1,5 @@
 import sodaListReducer from '../../reducers/soda-list-reducer';
+
 describe('sodaListReducer', () => {
   const currentState = {
     1: {name: 'Cherry Pop',
