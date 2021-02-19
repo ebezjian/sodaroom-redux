@@ -131,7 +131,7 @@ class SodaControl extends React.Component {
       onClickingEdit = {this.handleEditclick}/>;
       buttonText = "Return to Soda List";
 
-    } else if (this.state.formVisibleOnPage) {
+    } else if (this.props.formVisibleOnPage) {
         currentlyVisibleState = <NewSodaForm 
         onNewSodaCreation={this.handleAddingNewSodaToList} />;
         buttonText = "Return to Soda List";
