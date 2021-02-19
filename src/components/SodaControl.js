@@ -49,10 +49,12 @@ class SodaControl extends React.Component {
           editing: false,
         });
       } else {
-      this.setState(prevState => ({
-        formVisibleOnPage: !prevState.formVisibleOnPage
-      }));
-    }
+        const {dispatch} =this.props;
+        const action = {
+          type: 'TOGGLE_FORM'
+        }
+        dispatch(action);
+      }
   } 
 
   handleAddingNewSodaToList =(newSoda) => {
@@ -67,11 +69,10 @@ class SodaControl extends React.Component {
       flavor: flavor,
     }
     dispatch(action);
-    this.setState({formVisibleOnPage: false});
-    const newMasterSodaList = this.state.masterSodaList.concat(newSoda);
-    this.setState({
-      masterSodaList: newMasterSodaList,
-      formVisibleOnPage: false});
+    const action2 = {
+      type: 'TOGGLE_FORM'
+    }
+    dispatch(action2);
   }
 
   handleChangingSelectedSoda = (id) => {
