@@ -93,7 +93,7 @@ class SodaControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    console.log(this.state)
+    
     if (this.state.editing) {
       currentlyVisibleState = <EditSodaForm 
       soda = {this.state.selectedSoda}

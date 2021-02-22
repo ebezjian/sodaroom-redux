@@ -4,23 +4,25 @@ describe('sodaListReducer', () => {
   const currentState = {
     1: {name: 'Cherry Pop',
   brand: 'Pepsi',
-  price: '12',
+  price: 12,
   flavor: 'cherry',
+  quantity: 124,
   
   id: 1},
   2: {name: 'StrawPop',
   brand: 'Pepsi',
-  price: '12',
+  price: 12,
   flavor: 'strawberry',
+  quantity: 124,
   id: 2},
   }
   let action;
   const sodaData = {
     name: 'Cherry Pop',
     brand: 'Pepsi',
-    price: '12',
+    price: 12,
     flavor: 'cherry',
-    
+    quantity: 124,
     id: 1
   };
 
@@ -33,13 +35,14 @@ describe('sodaListReducer', () => {
 
 
   test('Should successfully add new soda data to masterSodaList', () => {
-      const {name, brand, price, flavor, id} = sodaData;
+      const {name, brand, price, flavor, quantity, id} = sodaData;
         action = {
           type: 'ADD_SODA',
           name: name,
           brand: brand,
           price: price,
           flavor: flavor,
+          quantity: quantity,
           id: id,
     };
 
@@ -49,6 +52,7 @@ describe('sodaListReducer', () => {
         brand: brand,
         price: price,
         flavor: flavor,
+        quantity: 124,
         id: id,
       }
     });
@@ -61,8 +65,9 @@ describe('sodaListReducer', () => {
     expect(sodaListReducer(currentState, action)).toEqual({
       2:{name: 'StrawPop',
       brand: 'Pepsi',
-      price: '12',
-      flavor: 'strawberry',      
+      price: 12,
+      flavor: 'strawberry',    
+      quantity: 124,  
       id: 2},
     });
   });
