@@ -1,8 +1,8 @@
 import * as a from './../../actions/index';
 import * as c from './../../actions/ActionTypes';
-describe('taproom actions', () => {  test('deleteKeg should create DELETE_KEG action', ()=>{
-  expect(a.deleteKeg(1)).toEqual({
-    type: c.DELETE_KEG,
+describe('taproom actions', () => {  test('deleteSoda should create DELETE_SODA action', ()=>{
+  expect(a.deleteSoda(1)).toEqual({
+    type: c.DELETE_SODA,
     id: 1
   });
 });
