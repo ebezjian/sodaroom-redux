@@ -1,4 +1,5 @@
 import sodaListReducer from '../../reducers/soda-list-reducer';
+import * as c from './../../actions/ActionTypes';
 
 describe('sodaListReducer', () => {
   const currentState = {
@@ -37,24 +38,24 @@ describe('sodaListReducer', () => {
   test('Should successfully add new soda data to masterSodaList', () => {
       const {name, brand, price, flavor, quantity, id} = sodaData;
         action = {
-          type: 'ADD_SODA',
-          name: name,
-          brand: brand,
-          price: price,
-          flavor: flavor,
-          quantity: quantity,
-          id: id,
+          type: c.ADD_SODA,
+          name,
+          brand,
+          price,
+          flavor,
+          quantity,
+          id,
     };
 
-    expect(sodaListReducer({}, action)).toMatchObject
+    expect(sodaListReducer({}, action)).toEqual
     ({
       [id] : {
-        name: name,
-        brand: brand,
-        price: price,
-        flavor: flavor,
-        quantity: 124,
-        id: id,
+        name,
+        brand,
+        price,
+        flavor,
+        quantity,
+        id,
       }
     });
   });
