@@ -20,7 +20,7 @@ export const addSoda = (soda) => {
     quantity,
     id
   }
-}
+};
 
 export const toggleEdit = () => {
   return {
