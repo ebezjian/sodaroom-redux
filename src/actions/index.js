@@ -1,7 +1,8 @@
 
 
-export const deleteSoda = id => ({
-  type: 'DELETE_SODA',
+export const deleteKeg = (id) => ({
+  type: c.DELETE_KEG,
+  id
 });
 
 export const toggleForm = () => ({

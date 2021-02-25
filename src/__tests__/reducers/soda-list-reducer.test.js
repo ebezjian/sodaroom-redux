@@ -46,7 +46,8 @@ describe('sodaListReducer', () => {
           id: id,
     };
 
-    expect(sodaListReducer({}, action)).toEqual({
+    expect(sodaListReducer({}, action)).toMatchObject
+    ({
       [id] : {
         name: name,
         brand: brand,
