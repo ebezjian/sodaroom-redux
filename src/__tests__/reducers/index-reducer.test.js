@@ -2,6 +2,7 @@ import rootReducer from '../../reducers/index';
 import { createStore } from 'redux';
 import formVisibleReducer from '../../reducers/form-visible-reducer';
 import sodaListReducer from '../../reducers/soda-list-reducer';
+import * as c from './../../actions/ActionTypes';
 
 
 describe("rootReducer", () => {
@@ -23,7 +24,7 @@ describe("rootReducer", () => {
 
   test('Check that ADD_SODA action works for ticketListReducer and root reducer', () => {
     const action = {
-      type: 'ADD_SODA',
+      type: c.ADD_SODA,
       name: 'Cherry Pop',
       brand: 'Pepsi',
       price: '12',
@@ -37,7 +38,7 @@ describe("rootReducer", () => {
   
   test('Check that TOGGLE_FORM action works for formVisibleReducer and root reducer', () => {
     const action = {
-      type: 'TOGGLE_FORM'
+      type: c.TOGGLE_FORM,
     }
     store.dispatch(action);
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));
