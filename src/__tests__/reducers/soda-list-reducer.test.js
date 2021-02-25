@@ -59,6 +59,7 @@ describe('sodaListReducer', () => {
       }
     });
   });
+  
   test('Should successfully delete a soda', () => {
     action = {
       type: 'DELETE_SODA',
