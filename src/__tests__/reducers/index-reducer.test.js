@@ -26,7 +26,7 @@ describe("rootReducer", () => {
       type: 'ADD_SODA',
       name: 'Cherry Pop',
       brand: 'Pepsi',
-      price: 12,
+      price: '12',
       quantity: 124,
       flavor: 'cherry',
       id: 1
